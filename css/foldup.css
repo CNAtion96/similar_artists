@@ -1,0 +1,66 @@
+body{
+	font-family: brevia, helvetica, verdana, sans-serif;
+}
+
+header{
+    height: 85px;
+}
+
+.foldup {
+	text-transform: uppercase;
+	font-size: 3em;
+	text-align: center;
+	color: #FFF;
+}
+
+.foldup > span {
+	display: inline-block;
+	margin: 20px 10px;
+	border-radius: 12px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+} 
+
+.foldup >span:last-child {
+	margin-right: -75px;
+}
+.foldup >span:first-child {
+	margin-left: -80px;
+}
+
+.foldup span > span{
+	display: inline-block;
+	width: 1.5em;
+	padding: .2em 0;
+	position: relative;
+}
+
+
+
+.foldup span > span:nth-child(even):hover {
+	background-color: #D33030;
+	box-shadow: -8px -10px 10px rgba(0, 39, 39, .6);
+}
+.foldup span > span:nth-child(odd):hover {
+	background-color: #B91414;
+	box-shadow: -4px -6px 10px rgba(0, 39, 39, .6);
+}
+
+.foldup span > span:nth-child(odd){
+    background-color: #9A0000;
+    transform: skewY(10deg) ;
+	color: #00BB00;
+	box-shadow: -1px -3px 10px rgba(0, 39, 39, .6);
+}
+.foldup span > span:nth-child(even){
+    background-color: #B01515;
+    transform: skewY(-10deg) ;
+	color: #30DB30;
+	box-shadow: -5px -7px 10px rgba(0, 39, 39, .6);
+}
+
+.foldup span > span:first-child { border-radius: 5px 0 0 5px;}
+.foldup span > span:last-child { border-radius: 0 5px 5px 0; }
+.foldup span > span:only-child { border-radius: 5px}
+
+

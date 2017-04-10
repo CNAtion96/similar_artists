@@ -1,2 +1,127 @@
 body {
-}
+  background-color: #008C8C;
+  background-size: cover; }
+  body header {
+    height: 85px;
+    margin-bottom: 20px; }
+    body header h1 {
+      text-align: center; }
+  body section .content {
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 5px; }
+    body section .content form {
+      text-align: center;
+      margin-bottom: 25px; }
+      body section .content form input[type=text] {
+        background-color: #BD0000;
+        border: none;
+        height: 30px;
+        border-radius: 5px;
+        padding: 5px;
+        width: 75%;
+        box-shadow: -8px 5px 5px rgba(145, 0, 0, 0.7);
+        color: white; }
+        body section .content form input[type=text]:focus {
+          background-color: #EA0000;
+          outline: none; }
+        body section .content form input[type=text]::placeholder {
+          color: white; }
+    body section .content input[type=submit] {
+      border-radius: 5px;
+      box-shadow: -8px 5px 5px rgba(145, 0, 0, 0.7);
+      background-color: #BD0000;
+      outline: none;
+      color: white; }
+    body section .content .artistContent {
+      background-color: #007272;
+      box-shadow: -10px 10px 5px rgba(0, 39, 39, 0.5);
+      border-radius: 5px;
+      padding: 15px; }
+      body section .content .artistContent .artistName {
+        text-align: center; }
+      body section .content .artistContent .artistImg {
+        height: 207px; }
+        body section .content .artistContent .artistImg img {
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 5px;
+          box-shadow: -8px 8px 5px rgba(0, 39, 39, 0.5); }
+      body section .content .artistContent h3 {
+        text-align: center; }
+      body section .content .artistContent .bio {
+        height: 207px; }
+      body section .content .artistContent .nav-tabs {
+        margin-top: 25px;
+        border-bottom: 3px solid #303136; }
+        body section .content .artistContent .nav-tabs li a {
+          border: medium none;
+          color: white;
+          background-color: rgba(0, 39, 39, 0.4); }
+          body section .content .artistContent .nav-tabs li a.active {
+            background-color: #303136 !important; }
+          body section .content .artistContent .nav-tabs li a:hover {
+            background-color: #303136 !important;
+            border: medium none;
+            border-radius: 5px 5px 0px 0px;
+            color: #fff; }
+      body section .content .artistContent .tab-content {
+        margin-top: 25px; }
+        body section .content .artistContent .tab-content .dispArtist {
+          text-align: center; }
+          body section .content .artistContent .tab-content .dispArtist select {
+            margin-bottom: 50px; }
+        body section .content .artistContent .tab-content #simArtists {
+          margin-bottom: 45px; }
+          body section .content .artistContent .tab-content #simArtists .simArtistImg {
+            height: 100px;
+            display: block;
+            margin-bottom: 75px;
+            text-align: center; }
+            body section .content .artistContent .tab-content #simArtists .simArtistImg:hover img {
+              box-shadow: -10px 10px 7px rgba(0, 39, 39, 0.5) !important; }
+            body section .content .artistContent .tab-content #simArtists .simArtistImg:hover h4 {
+              color: #00BB00; }
+            body section .content .artistContent .tab-content #simArtists .simArtistImg img {
+              max-height: 100%;
+              border-radius: 5px;
+              box-shadow: -8px 8px 5px rgba(0, 39, 39, 0.5);
+              cursor: pointer; }
+              body section .content .artistContent .tab-content #simArtists .simArtistImg img:hover {
+                box-shadow: -10px 10px 7px rgba(0, 39, 39, 0.5);
+                border-radius: 7px; }
+            body section .content .artistContent .tab-content #simArtists .simArtistImg h4 {
+              cursor: pointer; }
+              body section .content .artistContent .tab-content #simArtists .simArtistImg h4:hover {
+                color: #00BB00; }
+        body section .content .artistContent .tab-content #soundCloud .coverImg {
+          height: 100px;
+          text-align: center;
+          margin-bottom: 15px;
+          border-radius: 5px; }
+          body section .content .artistContent .tab-content #soundCloud .coverImg img {
+            max-height: 100%;
+            box-shadow: -8px 8px 5px rgba(0, 39, 39, 0.5); }
+        body section .content .artistContent .tab-content #soundCloud audio {
+          margin-bottom: 15px; }
+        body section .content .artistContent .tab-content #soundCloud .playlist {
+          border-radius: 5px;
+          background-color: darkslategray;
+          padding: 5px;
+          overflow: scroll;
+          height: 217px;
+          box-shadow: -8px 8px 5px rgba(0, 39, 39, 0.5); }
+          body section .content .artistContent .tab-content #soundCloud .playlist p {
+            cursor: pointer;
+            border-bottom: 1px solid black;
+            margin: 10px 0px;
+            color: whitesmoke; }
+            body section .content .artistContent .tab-content #soundCloud .playlist p:hover {
+              background-color: slategrey;
+              color: black; }
+  body footer p {
+    text-align: center; }
+    body footer p #lastFM {
+      color: #8a000b; }
+    body footer p #sCloud {
+      color: #ff3b00; }

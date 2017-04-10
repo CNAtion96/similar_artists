@@ -19,6 +19,7 @@
     "gulp-sass": "^2.3.2"
   },
   "dependencies": {
+    "angular-ui-router": "^0.4.2",
     "run-sequence": "^1.2.2"
   }
 }

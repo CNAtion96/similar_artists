@@ -1,0 +1,56 @@
+<div class="col-md-10 col-md-offset-1 content">
+    <form class="col-md-4 col-md-offset-4" novalidate name='artistName' ng-submit='vm.searchArtist(artistName.$valid)'>
+        <input type="text" id="search" placeholder="Artist Name" ng-model="vm.artist" required>
+        <input  type="Submit" value="Search">
+    </form>
+    <div class="col-md-12 artistContent" ng-binding="item in vm.artistInit">
+        <h3 class="col-md-12 artistName">{{vm.artistInit.$$state.value.data.artist.name}}</h3>
+        <div class="col-md-3  artistImg">
+            <img src="{{vm.artistInit.$$state.value.data.artist.image[4]['#text']}}" alt="">
+        </div>
+        <p class="col-md-9">{{vm.artistInit.$$state.value.data.artist.bio.summary}}</p>
+        <ul class="nav nav-tabs col-md-12">
+            <li class="nav-item">
+                <a class="nav-link linkOne active" ng-click="vm.changeTab1()" data-toggle="tab" href="#similar">Similar Artists</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link linkTwo" ng-click="vm.changeTab2()" data-toggle="tab" href="#soundCloud">Sound Cloud</a>
+            </li>
+        </ul>
+        <div class="tab-content col-md-12">
+            <div id="similar" class="tab-pane fade in active">
+                <h3 class="col-md-12">Similar Artists</h3>
+                <div class="col-md-6 col-md-offset-3 dispArtist">
+                    <label for="#dispArtist">Number of Artist to Display</label>
+                    <select  ng-model="vm.limit" ng-change="vm.changeQuantity()">
+                        <option selected="selected" value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="75">75</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div id="simArtists" class="col-md-8 col-md-offset-2">
+                    <div ng-repeat="artist in vm.artistSimilar.$$state.value.data.similarartists.artist">
+                        <div class="simArtistImg col-md-4">
+                            <img ng-click="vm.artistChange(artist.name)" src="{{artist.image[4]['#text']}}">
+                            <h4 ng-click="vm.artistChange(artist.name)">{{artist.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="soundCloud" class="tab-pane fade col-md-6 col-md-offset-3">
+                <h3>Sound Cloud</h3>
+                <div class="coverImg col-md-12">
+                    <img src="{{vm.songImg}}">
+                </div>
+               <audio class="col-md-12" src={{vm.currentSong}} controls autoplay>
+               </audio>
+                <div class="playlist col-md-12">
+                    <div class="col-md-12" ng-repeat="song in vm.artistSongs.$$state.value.data">
+                        <p ng-click="vm.setSong(song.stream_url, song.artwork_url);">{{song.title}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

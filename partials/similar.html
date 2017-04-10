@@ -1,0 +1,9 @@
+ <h3 class="col-md-12">Similar Artists</h3>
+<div id="simArtists" class="col-md-8 col-md-offset-2">
+    <div ng-repeat="artist in vm.artistInit.$$state.value.data.artist.similar.artist">
+        <div class="simArtistImg col-md-4">
+            <img src="{{artist.image[4]['#text']}}">
+            <h4>{{artist.name}}</h4>
+        </div>
+    </div>
+</div>
